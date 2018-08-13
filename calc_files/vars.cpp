@@ -2,11 +2,12 @@
 #include "vars.h"
 
 vector<Variable> var_table;
+double trig(string s);
 
 double get_value(string s) {
 	for(Variable var : var_table)
 		if(var.name == s) return var.value;
-	return 0.0;
+	return trig(s);
 }
 
 void set_value(string s, double d) {
